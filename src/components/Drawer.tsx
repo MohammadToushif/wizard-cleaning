@@ -2,7 +2,7 @@ import { useState } from "react";
 import { X, ChevronDown, ChevronUp } from "lucide-react";
 import CustomBtn from "./CustomBtn";
 
-function SidePannel({ onClose }: { onClose?: () => void }) {
+function Drawer({ onClose }: { onClose?: () => void }) {
   const [isServicesOpen, setIsServicesOpen] = useState(true);
 
   const services = [
@@ -23,7 +23,7 @@ function SidePannel({ onClose }: { onClose?: () => void }) {
       />
 
       {/* Panel */}
-      <div className="fixed top-0 right-0 h-screen bg-white z-50 flex flex-col p-6 w-full max-w-sm shadow-lg transform transition-transform duration-300 ease-out translate-x-0 animate-slideIn">
+      <aside className="fixed top-0 right-0 h-screen bg-white z-50 flex flex-col p-6 w-full max-w-sm shadow-lg transform transition-transform duration-300 ease-out translate-x-0 animate-slideIn">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-700 hover:text-black"
@@ -88,9 +88,9 @@ function SidePannel({ onClose }: { onClose?: () => void }) {
         <div className="mt-8">
           <CustomBtn text="Get a Free Quote" className="w-full py-3" />
         </div>
-      </div>
+      </aside>
     </>
   );
 }
 
-export default SidePannel;
+export default Drawer;

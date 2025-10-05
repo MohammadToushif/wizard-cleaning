@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navigation from "./Navigation";
 import CustomBtn from "./CustomBtn";
 import { Menu, MoveRight } from "lucide-react";
-import SidePannel from "./Sidepannel";
+import Drawer from "./Drawer";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ function Header() {
         </button>
       </div>
 
-      {isOpen && <SidePannel onClose={() => setIsOpen(false)} />}
+      {isOpen && <Drawer onClose={() => setIsOpen(false)} />}
     </header>
   );
 }
