@@ -11,11 +11,11 @@ function Header() {
     <header className="h-18 bg-white shadow-lg flex justify-between items-center px-4 md:px-16 relative">
       <img src="/images/logo.svg" alt="logo" className="w-16" />
 
-      <div className="hidden md:flex">
+      <div className="hidden lg:flex">
         <Navigation />
       </div>
 
-      <div className="hidden md:flex items-center">
+      <div className="hidden lg:flex items-center">
         <CustomBtn
           text="Get a Free Quote"
           varient="outline"
@@ -25,7 +25,7 @@ function Header() {
         />
       </div>
 
-      <div className="relative flex items-center md:hidden">
+      <div className="relative flex items-center lg:hidden">
         <button
           type="button"
           onClick={() => setIsOpen(true)}

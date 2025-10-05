@@ -82,12 +82,12 @@ function Testimonial() {
               key={index}
               className="basis-full md:basis-1/2 flex justify-center"
             >
-              <div className="flex items-center gap-6 border border-gray-200 rounded-2xl shadow-sm p-6 w-full bg-white transition-all hover:shadow-md">
+              <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-center gap-6 border border-gray-200 rounded-2xl shadow-sm p-6 w-full bg-white transition-all hover:shadow-md">
                 <div className="flex-shrink-0">
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-40 md:w-60 h-40 md:h-60 rounded-xl object-cover"
+                    className="w-60 h-60 rounded-xl object-cover"
                   />
                 </div>
 

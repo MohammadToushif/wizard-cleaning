@@ -35,7 +35,7 @@ function WhyUs() {
   ];
 
   return (
-    <div className="text-center py-12 px-16">
+    <div className="relative text-center py-12 px-4 md:px-16">
       <h4 className="text-3xl font-semibold mb-3">Why Choose Us?</h4>
       <p className="text-xl max-w-4xl mx-auto">
         At Wizard, we understand that cleanliness is essential for a healthy
@@ -43,34 +43,76 @@ function WhyUs() {
         to detail, and customer satisfaction sets us apart in the cleaning
         industry across Ahmedabad.
       </p>
-
+      <img
+        src="/images/Ornament 12.svg"
+        alt="degisn"
+        className="absolute top-0 right-0"
+      />
       <div className="relative py-12">
-        <img
-          src="/images/why-us.webp"
-          alt="why-us image"
-          className="max-w-[640px] mx-auto"
-        />
-        {whyUs.map((item, index) => (
-          <div
-            key={index}
-            className={`absolute max-w-[240px] flex items-center gap-4 bg-indigo-50 rounded-4xl p-5 border-2 border-indigo-400 ${item.position}`}
-          >
-            <img src={item.icon} alt="icon" className="w-16 h-16" />
-            <span className="text-xl leading-tight capitalize ">
-              {item.title}
-            </span>
-          </div>
-        ))}
+        <div className="w-full md:hidden space-y-6">
+          {whyUs
+            .filter((_, index) => index < 3)
+            .map((item, index) => (
+              <div
+                key={index}
+                className={`max-w-md flex items-center justify-center gap-4 bg-indigo-50 rounded-4xl p-5 border-2 border-indigo-400 mx-auto`}
+              >
+                <img src={item.icon} alt="icon" className="w-16 h-16" />
+                <span className="text-xl leading-tight capitalize">
+                  {item.title}
+                </span>
+              </div>
+            ))}
+        </div>
+        <div className="w-full md:1/2">
+          <img
+            src="/images/why-us.webp"
+            alt="why-us image"
+            className="w-full max-w-[640px] mx-auto"
+          />
+        </div>
+        <div className="w-full md:hidden space-y-6 mt-6">
+          {whyUs
+            .filter((_, index) => index > 2)
+            .map((item, index) => (
+              <div
+                key={index}
+                className={`max-w-md flex items-center justify-center gap-4 bg-indigo-50 rounded-4xl p-5 border-2 border-indigo-400 mx-auto`}
+              >
+                <img src={item.icon} alt="icon" className="w-16 h-16" />
+                <span className="text-xl leading-tight capitalize">
+                  {item.title}
+                </span>
+              </div>
+            ))}
+        </div>
+
+        {/* only for mediam and above */}
+        <div className="hidden md:block">
+          {whyUs.map((item, index) => (
+            <div
+              key={index}
+              className={`absolute max-w-[240px] flex items-center gap-4 bg-indigo-50 rounded-4xl p-5 border-2 border-indigo-400 ${item.position}`}
+            >
+              <img src={item.icon} alt="icon" className="w-16 h-16" />
+              <span className="text-xl leading-tight capitalize ">
+                {item.title}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="relative text-center p-16">
-        <img
-          src="/images/discount-banner.svg"
-          alt="banner image"
-          className="w-full"
-        />
-        <div className="w-full max-w-4xl absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-          <h1 className="text-6xl font-semibold text-center text-white">
+      <div
+        className="max-w-7xl mx-auto p-6 lg:p-16 rounded-2xl mt-8 md:mt-12"
+        style={{
+          background: 'url("/images/discount-banner.svg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="w-full md:max-w-4xl px-4 mx-auto">
+          <h1 className="text-4xl lg:text-6xl font-semibold text-center text-white">
             Get 25% Discount on your first Cleaning Services.
           </h1>
           <CustomBtn
