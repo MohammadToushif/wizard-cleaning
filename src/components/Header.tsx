@@ -7,9 +7,6 @@ import SidePannel from "./Sidepannel";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleOpen = () => setIsOpen(true);
-  const handleClose = () => setIsOpen(false);
-
   return (
     <header className="h-18 bg-white shadow-lg flex justify-between items-center px-4 md:px-16 relative">
       <img src="/images/logo.svg" alt="logo" className="w-16" />
@@ -31,14 +28,14 @@ function Header() {
       <div className="relative flex items-center md:hidden">
         <button
           type="button"
-          onClick={handleOpen}
+          onClick={() => setIsOpen(true)}
           className="bg-gray-100 hover:bg-gray-200 shadow p-2 px-[10px] rounded-md cursor-pointer"
         >
           <Menu />
         </button>
       </div>
 
-      {isOpen && <SidePannel onClose={handleClose} />}
+      {isOpen && <SidePannel onClose={() => setIsOpen(false)} />}
     </header>
   );
 }
