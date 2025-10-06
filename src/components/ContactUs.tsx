@@ -35,7 +35,7 @@ function ContactUs() {
   ];
 
   return (
-    <section className="bg-indigo-50 py-16 px-6 md:px-16">
+    <section className="bg-indigo-50 px-4 py-16 md:px-16">
       <div className="bg-white rounded-2xl shadow-sm p-6 md:p-10 flex flex-col md:flex-row gap-8 items-stretch">
         <div className="w-full md:w-1/2 rounded-xl overflow-hidden shadow-sm">
           <iframe
@@ -43,7 +43,7 @@ function ContactUs() {
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7342.42280283956!2d72.51681!3d23.05271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b0f727069bf%3A0xb52b04208e105ae5!2sWizard%20the%20deep%20cleaning%20services!5e0!3m2!1sen!2sin!4v1759647192538!5m2!1sen!2sin"
             width="100%"
             height="100%"
-            className="border-0 h-[400px] md:h-full w-full"
+            className="border-0 min-h-[256px] md:h-full w-full"
             allowFullScreen
             loading="lazy"
           ></iframe>

@@ -35,7 +35,7 @@ function WhyUs() {
   ];
 
   return (
-    <div className="relative text-center py-12 px-4 md:px-16">
+    <div className="relative text-center px-4 md:px-16 mb-16">
       <h4 className="text-3xl font-semibold mb-3">Why Choose Us?</h4>
       <p className="text-xl max-w-4xl mx-auto">
         At Wizard, we understand that cleanliness is essential for a healthy
@@ -48,7 +48,8 @@ function WhyUs() {
         alt="degisn"
         className="absolute top-0 right-0"
       />
-      <div className="relative py-12">
+
+      <div className="relative py-12 space-y-6">
         <div className="w-full md:hidden space-y-6">
           {whyUs
             .filter((_, index) => index < 3)
@@ -64,14 +65,14 @@ function WhyUs() {
               </div>
             ))}
         </div>
-        <div className="w-full md:1/2">
+        <div className="w-full md:1/2 mt-6">
           <img
             src="/images/why-us.webp"
             alt="why-us image"
             className="w-full max-w-[640px] mx-auto"
           />
         </div>
-        <div className="w-full md:hidden space-y-6 mt-6">
+        <div className="w-full md:hidden space-y-6 mt-10">
           {whyUs
             .filter((_, index) => index > 2)
             .map((item, index) => (
@@ -111,13 +112,13 @@ function WhyUs() {
           backgroundPosition: "center",
         }}
       >
-        <div className="w-full md:max-w-4xl px-4 mx-auto">
-          <h1 className="text-4xl lg:text-6xl font-semibold text-center text-white">
+        <div className="w-full md:max-w-4xl px-4 mx-auto mb-3">
+          <h1 className="text-4xl lg:text-6xl font-semibold text-center text-white mb-6">
             Get 25% Discount on your first Cleaning Services.
           </h1>
           <CustomBtn
             text="contact us now"
-            className="mx-auto mt-14 bg-white text-indigo-700 hover:bg-indigo-700 hover:text-white py-3 font-medium"
+            className="mx-auto bg-white text-indigo-700 hover:bg-indigo-700 hover:text-white py-3 font-medium"
           />
         </div>
       </div>

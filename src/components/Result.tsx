@@ -3,7 +3,7 @@ import CustomBtn from "./CustomBtn";
 
 function Result() {
   return (
-    <div className="relative text-center px-4 md:px-16 mb-16">
+    <div className="relative text-center px-4 md:px-16 pt-6 mb-16">
       <h4 className="text-3xl font-semibold mb-3">Our Results</h4>
       <p className="text-xl max-w-4xl mx-auto mb-14">
         Not only do our clients love our work, but they also recommend us. Now,
@@ -12,7 +12,7 @@ function Result() {
       <img
         src="/images/Ornament 11.svg"
         alt="degisn"
-        className="absolute top-0 left-0"
+        className="absolute top-0 left-0 -z-1"
       />
       <div className="flex flex-col lg:flex-row gap-3">
         <div className="w-full lg:w-2/3">

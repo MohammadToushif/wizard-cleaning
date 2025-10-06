@@ -26,7 +26,7 @@ function Services() {
   ];
 
   return (
-    <div className="text-center py-12 px-4">
+    <div className="text-center pt-12 pb-6 px-4 mb-16">
       <h4 className="text-3xl font-semibold mb-3">
         We Have All Your Cleaning Needs Covered!
       </h4>
@@ -35,10 +35,10 @@ function Services() {
         fast, and spotless!
       </p>
 
-      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5 p-12 justify-center sm:justify-between">
+      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5 py-12 sm:p-12 justify-center sm:justify-between">
         {services.map((item, index) => (
           <div
-            className="bg-white rounded-xl border-b hover:border-b-indigo-400 transition shadow overflow-hidden"
+            className="w-full bg-white rounded-xl border-b hover:border-b-indigo-400 transition shadow overflow-hidden"
             key={index}
           >
             <img

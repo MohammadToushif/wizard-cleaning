@@ -59,7 +59,7 @@ const testimonials = [
 
 function Testimonial() {
   return (
-    <div className="py-16 px-6 md:px-16 bg-white">
+    <div className="px-4 md:px-16 mb-16 bg-white">
       <h4 className="text-3xl font-semibold text-center mb-10">
         Our Valuable Client's Responses
       </h4>
@@ -82,12 +82,12 @@ function Testimonial() {
               key={index}
               className="basis-full md:basis-1/2 flex justify-center"
             >
-              <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-center gap-6 border border-gray-200 rounded-2xl shadow-sm p-6 w-full bg-white transition-all hover:shadow-md">
-                <div className="flex-shrink-0">
+              <div className="w-full flex flex-col lg:flex-row items-center rounded-2xl shadow-sm gap-6 p-6 border border-gray-200 bg-white transition-all hover:shadow-md">
+                <div className="w-full sm:w-60 h-60 rounded-xl overflow-hidden flex-shrink-0">
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-60 h-60 rounded-xl object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
